@@ -1,4 +1,5 @@
 allow_images=true
 key_expand=Tab
 stylesheet=style.css
-width=400
+width=300
+image_size=20
