@@ -17,3 +17,4 @@ com.brave.Browser
 python3-i3ipc
 com.ktechpit.whatsie
 brightnessctl
+playerctl
