@@ -1,2 +1,4 @@
 allow_images=true
 key_expand=Tab
+stylesheet=style.css
+width=400

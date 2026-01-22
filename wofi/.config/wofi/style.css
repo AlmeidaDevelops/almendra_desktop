@@ -1,0 +1,51 @@
+/* Clean and Rounded Wofi Theme */
+
+window {
+    margin: 5px;
+    border: 2px solid #bdbdbd;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+#input {
+    margin: 10px;
+    border: 2px solid #bdbdbd;
+    background-color: #e0e0e0;
+    color: #212121;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#inner-box {
+    margin: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 5px;
+}
+
+#text {
+    margin: 5px;
+}
+
+#entry {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+#entry:selected {
+    background-color: #424242;
+}
+
+#text:selected {
+    color: #f5f5f5;
+}

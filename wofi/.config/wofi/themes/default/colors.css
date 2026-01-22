@@ -1,0 +1,7 @@
+/* Monochromatic Light Theme - Wofi */
+
+@define-color bg_primary #f5f5f5;
+@define-color bg_secondary #e0e0e0;
+@define-color text_primary #212121;
+@define-color text_secondary #757575;
+@define-color accent_color #424242;

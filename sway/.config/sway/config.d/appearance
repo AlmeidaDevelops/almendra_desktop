@@ -1,0 +1,7 @@
+# Window titles and borders
+default_border pixel 3
+default_floating_border pixel 3
+
+# Gaps
+gaps inner 10
+gaps outer 5

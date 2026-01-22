@@ -1,0 +1,39 @@
+/* Monochromatic Light Theme - Waybar */
+
+@define-color bg_primary rgba(240, 240, 240, 0.9);
+@define-color bg_secondary rgba(224, 224, 224, 0.9);
+@define-color text_primary #212121;
+@define-color text_secondary #757575;
+@define-color border_color #bdbdbd;
+@define-color accent_color #424242;
+
+#clock,
+#battery,
+#backlight,
+#network,
+#mpris,
+#pulseaudio,
+#tray {
+    background-color: @bg_primary;
+    color: @text_primary;
+}
+
+#workspaces button {
+    background-color: @bg_primary;
+    color: @text_secondary;
+}
+
+#workspaces button.focused {
+    background-color: @accent_color;
+    color: @bg_primary;
+}
+
+
+#mpris {
+    background-color: rgba(66, 66, 66, 0.1);
+}
+
+#mpris.paused {
+    color: @text_secondary;
+    background-color: rgba(66, 66, 66, 0.05);
+}

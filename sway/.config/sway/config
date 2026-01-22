@@ -9,6 +9,7 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 ### Include fragments
+include themes/default/colors
 include config.d/*
 
 ### Input configuration

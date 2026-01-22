@@ -1,0 +1,49 @@
+/* Wofi Common Styles */
+
+window {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 10px;
+    border: none;
+    background-color: @bg_primary;
+    border-radius: 20px;
+}
+
+#input {
+    margin: 10px;
+    border: none;
+    background-color: @bg_secondary;
+    color: @text_primary;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#inner-box {
+    margin: 10px;
+    border: none;
+}
+
+#scroll {
+    margin: 5px;
+}
+
+#text {
+    margin: 5px;
+}
+
+#entry {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#entry:selected {
+    background-color: @accent_color;
+}
+
+#text:selected {
+    color: @bg_primary;
+}

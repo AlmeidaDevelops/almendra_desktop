@@ -1,0 +1,40 @@
+/* Common Waybar layout and shapes */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif, "Font Awesome 6 Free";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+    min-height: 28px;
+}
+
+#clock,
+#battery,
+#backlight,
+#network,
+#mpris,
+#pulseaudio,
+#tray {
+    border-radius: 12px;
+    margin: 2px 4px;
+    padding: 0 10px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    margin: 2px 2px;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+
+#workspaces button.focused {
+    border-bottom: 3px solid transparent;
+}

@@ -1,0 +1,19 @@
+# Monochromatic Light Theme - Sway
+
+# Basic colors
+set $white  #ffffff
+set $lgray  #f5f5f5
+set $gray   #bdbdbd
+set $dgray  #424242
+set $black  #212121
+
+# Client colors
+# class                 border  backgr. text    indicator child_border
+client.focused          $dgray  $lgray  $black  $gray     $dgray
+client.focused_inactive $gray   $lgray  $dgray  $gray     $gray
+client.unfocused        $gray   $lgray  $dgray  $gray     $gray
+client.urgent           #ff5252 #ff5252 $white  #ff5252   #ff5252
+client.placeholder      $black  $black  $white  $black    $black
+
+# Wallpaper (optional, keeping it here for now)
+output * bg $lgray solid
