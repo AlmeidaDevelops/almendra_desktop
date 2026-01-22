@@ -7,8 +7,8 @@
         "clock"
     ],
     "modules-right": [
-        "tray",
-        "battery"
+        "battery",
+        "tray"
     ],
     "sway/window": {
         "max-length": 50
