@@ -1,11 +1,11 @@
 {
     "layer": "top",
     "modules-left": [
-        "sway/workspaces"
+        "sway/workspaces",
+        "mpris"
     ],
     "modules-center": [
-        "clock",
-        "mpris"
+        "clock"
     ],
     "modules-right": [
         "backlight",
@@ -27,7 +27,7 @@
     },
     "mpris": {
         "format": "{player_icon} {title} - {artist}",
-        "format-paused": "{status_icon} <i>{title} - {artist}</i>",
+        "format-paused": "{status_icon} {title} - {artist}",
         "player-icons": {
             "default": "▶",
             "spotify": "",
@@ -36,9 +36,9 @@
         "status-icons": {
             "paused": "⏸"
         },
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl previous",
-        "on-scroll-down": "playerctl next"
+        "on-click": "/home/alm/dotfiles/scripts/media_control.sh play-pause",
+        "on-scroll-up": "/home/alm/dotfiles/scripts/media_control.sh next",
+        "on-scroll-down": "/home/alm/dotfiles/scripts/media_control.sh previous"
     },
     "battery": {
         "states": {

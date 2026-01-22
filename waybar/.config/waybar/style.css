@@ -12,6 +12,7 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    min-height: 35px;
 }
 
 #workspaces button {
@@ -39,5 +40,10 @@ window#waybar {
 #mpris {
     background-color: rgba(100, 114, 125, 0.3);
     border-radius: 10px;
-    margin: 5px 0;
+    margin: 5px 10px;
+}
+
+#mpris.paused {
+    color: #aaaaaa;
+    background-color: rgba(100, 114, 125, 0.1);
 }
