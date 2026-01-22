@@ -29,6 +29,7 @@ window#waybar {
 #clock,
 #battery,
 #backlight,
+#network,
 #pulseaudio {
     padding: 0 10px;
     color: #ffffff;
