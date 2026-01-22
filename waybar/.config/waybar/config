@@ -34,7 +34,7 @@
             "firefox": ""
         },
         "status-icons": {
-            "paused": "⏸"
+            "paused": ""
         },
         "on-click": "/home/alm/dotfiles/scripts/media_control.sh play-pause",
         "on-scroll-up": "/home/alm/dotfiles/scripts/media_control.sh next",
