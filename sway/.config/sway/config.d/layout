@@ -1,0 +1,2 @@
+# Fibonacci layout (autotiling)
+exec_always python3 ~/.config/sway/autotiling.py
