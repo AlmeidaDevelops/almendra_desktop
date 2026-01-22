@@ -23,7 +23,7 @@ window {
     border: none;
     background-color: #e0e0e0;
     color: #212121;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 6px 10px;
 }
 
@@ -43,7 +43,7 @@ window {
 
 #entry {
     padding: 6px;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 
