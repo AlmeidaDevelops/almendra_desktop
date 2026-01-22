@@ -17,7 +17,8 @@ else
     grim "$FILENAME"
 fi
 
-# Notify user
+# Notify user and copy to clipboard
 if [ -f "$FILENAME" ]; then
-    notify-send "Screenshot saved" "$FILENAME" -i "$FILENAME"
+    wl-copy -t image/png < "$FILENAME"
+    notify-send "Screenshot saved and copied to clipboard" "$FILENAME" -i "$FILENAME"
 fi
