@@ -1,0 +1,10 @@
+sway
+waybar
+wofi
+mako
+foot
+stow
+git
+xdg-desktop-portal-wlr
+fonts-font-awesome
+jq

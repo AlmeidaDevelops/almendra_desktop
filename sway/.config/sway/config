@@ -3,6 +3,8 @@ set $mod Mod4
 set $term foot
 set $menu wofi --show drun
 
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 ### Output
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
@@ -12,6 +14,20 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -B 'Yes' 'swaymsg exit'
+
+### Input configuration
+input type:keyboard {
+    xkb_layout latam
+}
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+}
+
+input type:pointer {
+    natural_scroll enabled
+}
 
 # Focus
 bindsym $mod+Left focus left
