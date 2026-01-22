@@ -8,3 +8,5 @@ git
 xdg-desktop-portal-wlr
 fonts-font-awesome
 jq
+alacritty
+fonts-roboto
