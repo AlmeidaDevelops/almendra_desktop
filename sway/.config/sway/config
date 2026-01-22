@@ -6,7 +6,7 @@ set $menu wofi --show drun
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Output
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+exec_always ~/dotfiles/scripts/wallpaper_rotator.sh --init
 
 ### Include fragments
 include themes/default/colors

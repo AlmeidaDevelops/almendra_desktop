@@ -31,10 +31,10 @@
             "on-scroll": 1,
             "on-click-right": "mode",
             "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "months": "<span color='#212121'><b>{}</b></span>",
                 "days": "<span><b>{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6666'><b><u>{}</u></b></span>"
+                "weekdays": "<span color='#9e9e9e'><b>{}</b></span>",
+                "today": "<span color='#212121'><b><u>{}</u></b></span>"
             }
         }
     },
