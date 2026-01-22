@@ -29,9 +29,11 @@
         "format": "{player_icon} {title} - {artist}",
         "format-paused": "{status_icon} {title} - {artist}",
         "player-icons": {
-            "default": "▶",
+            "default": "",
             "spotify": "",
-            "firefox": ""
+            "firefox": "",
+            "chromium": "",
+            "youtube-music": ""
         },
         "status-icons": {
             "paused": ""
