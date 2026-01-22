@@ -10,3 +10,7 @@ fonts-font-awesome
 jq
 alacritty
 fonts-roboto
+flatpak
+gnome-software
+gnome-software-plugin-flatpak
+com.brave.Browser
