@@ -16,3 +16,4 @@ gnome-software-plugin-flatpak
 com.brave.Browser
 python3-i3ipc
 com.ktechpit.whatsie
+brightnessctl

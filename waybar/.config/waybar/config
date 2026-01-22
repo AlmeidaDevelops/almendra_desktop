@@ -7,6 +7,7 @@
         "clock"
     ],
     "modules-right": [
+        "backlight",
         "pulseaudio",
         "battery",
         "tray"
@@ -50,8 +51,17 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": [
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            ""
+        ]
     }
 }

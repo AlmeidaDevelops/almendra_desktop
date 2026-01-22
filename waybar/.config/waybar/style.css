@@ -27,7 +27,9 @@ window#waybar {
 }
 
 #clock,
-#battery {
+#battery,
+#backlight,
+#pulseaudio {
     padding: 0 10px;
     color: #ffffff;
 }
