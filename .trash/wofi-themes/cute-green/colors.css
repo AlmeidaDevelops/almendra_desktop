@@ -1,0 +1,52 @@
+/* 🐸 Cute Green Froggy Theme - Wofi */
+/* Pond-inspired launcher with lily pad entries */
+
+@define-color bg_primary #1a3a2f;
+/* Deep pond */
+@define-color bg_secondary #2d5a47;
+/* Lily pad */
+@define-color text_primary #e8f5e9;
+/* Cream */
+@define-color text_secondary #a5d6a7;
+/* Light green */
+@define-color accent_color #5cb85c;
+/* Happy frog */
+@define-color blossom #f8b4d9;
+/* Pink blossom */
+
+/* Override common styles for this theme */
+#outer-box {
+    background-color: @bg_primary;
+    border: 3px solid @accent_color;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+#input {
+    background-color: @bg_secondary;
+    color: @text_primary;
+    border: 2px solid @accent_color;
+}
+
+#input:focus {
+    border-color: @blossom;
+}
+
+#entry {
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+#entry:selected {
+    background: linear-gradient(135deg, @accent_color 0%, #4a9c4a 100%);
+    border-color: @blossom;
+    border-radius: 15px;
+}
+
+#text {
+    color: @text_primary;
+}
+
+#text:selected {
+    color: @bg_primary;
+    font-weight: bold;
+}

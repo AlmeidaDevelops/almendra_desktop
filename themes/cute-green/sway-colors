@@ -1,0 +1,20 @@
+# Cute Green Froggy Theme - AESTHETIC - Sway Colors
+# Deep pond greens with semi-transparent feel for apps
+
+# Palette
+set $bg_primary   #1a3a2f
+set $bg_secondary #2d5a47
+set $text_primary #e8f5e9
+set $text_muted   #a5d6a7
+set $accent       #5cb85c
+set $urgent       #f8b4d9
+
+# Client colors
+client.focused          $accent       $bg_secondary $text_primary $urgent       $accent
+client.focused_inactive $bg_secondary $bg_primary   $text_primary $bg_secondary $bg_secondary
+client.unfocused        $bg_primary   $bg_primary   $text_muted   $bg_primary   $bg_primary
+client.urgent           $urgent       $urgent       $bg_primary   $urgent       $urgent
+client.placeholder      $bg_primary   $bg_primary   $text_primary $bg_primary   $bg_primary
+
+# Background
+output * bg #1a3a2f solid_color

@@ -1,0 +1,122 @@
+/* 🐸 Cute Green Froggy Theme - Waybar */
+/* Inspired by anime frogs, lily pads, swamp flowers & pink accents */
+
+/* Color palette */
+@define-color pond #1a3a2f;
+/* Deep pond green - background */
+@define-color lily #2d5a47;
+/* Lily pad green */
+@define-color frog #5cb85c;
+/* Happy frog green */
+@define-color blossom #f8b4d9;
+/* Pink cherry blossom */
+@define-color lotus #ff9ecd;
+/* Bright lotus pink */
+@define-color cream #e8f5e9;
+/* Soft cream */
+@define-color mist rgba(232, 245, 233, 0.15);
+
+/* Main bar - pond surface */
+window#waybar {
+    background: linear-gradient(180deg, @pond 0%, rgba(26, 58, 47, 0.85) 100%);
+    border-bottom: 2px solid @frog;
+}
+
+/* All modules - lily pad style */
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#tray {
+    background-color: @lily;
+    color: @cream;
+    border-radius: 20px;
+    margin: 4px 3px;
+    padding: 2px 12px;
+    border: 2px solid @frog;
+    font-weight: 500;
+}
+
+/* Workspaces - stepping stones */
+#workspaces button {
+    background-color: transparent;
+    color: @cream;
+    border-radius: 50%;
+    margin: 4px 2px;
+    padding: 0 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background-color: @mist;
+    border-color: @blossom;
+}
+
+#workspaces button.focused {
+    background-color: @frog;
+    color: @pond;
+    border-color: @blossom;
+    font-weight: bold;
+}
+
+/* MPRIS - music floats like a water lily */
+#mpris {
+    background: linear-gradient(135deg, @lily 0%, @pond 100%);
+    color: @blossom;
+    border-radius: 20px;
+    margin: 4px 3px;
+    padding: 2px 14px;
+    border: 2px solid @blossom;
+    font-style: italic;
+}
+
+#mpris.paused {
+    color: rgba(248, 180, 217, 0.6);
+    border-color: rgba(248, 180, 217, 0.4);
+}
+
+/* Battery states */
+#battery.charging {
+    color: @frog;
+    border-color: @frog;
+}
+
+#battery.warning {
+    color: #ffb74d;
+    border-color: #ffb74d;
+}
+
+#battery.critical {
+    color: @lotus;
+    border-color: @lotus;
+    animation: ribbit 0.8s ease-in-out infinite;
+}
+
+/* Clock - special lily pad */
+#clock {
+    background: linear-gradient(135deg, @frog 0%, @lily 100%);
+    color: @pond;
+    font-weight: bold;
+    border-color: @blossom;
+}
+
+/* Network */
+#network.disconnected {
+    color: @lotus;
+    border-color: @lotus;
+}
+
+/* Cute ribbit animation for critical states */
+@keyframes ribbit {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}

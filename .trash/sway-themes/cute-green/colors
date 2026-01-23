@@ -1,0 +1,28 @@
+# Cute Green Froggy Theme - Sway
+# Pond greens, lily pads, and cherry blossom pinks
+
+# Palette - Swamp meets anime
+# pond: Deep swamp water
+# lily: Lily pad floating
+# frog: Happy bright frog
+# blossom: Cherry blossom pink
+# lotus: Bright lotus accent
+# cream: Soft white
+
+set $pond       #1a3a2f
+set $lily       #2d5a47
+set $frog       #5cb85c
+set $blossom    #f8b4d9
+set $lotus      #ff9ecd
+set $cream      #e8f5e9
+
+# Client colors
+# class                 border    backgr.  text     indicator  child_border
+client.focused          $frog     $lily    $cream   $blossom   $frog
+client.focused_inactive $lily     $pond    $cream   $lily      $lily
+client.unfocused        $pond     $pond    $cream   $pond      $pond
+client.urgent           $lotus    $lotus   $pond    $lotus     $lotus
+client.placeholder      $pond     $pond    $cream   $pond      $pond
+
+# Fallback background
+output * bg #1a3a2f solid_color

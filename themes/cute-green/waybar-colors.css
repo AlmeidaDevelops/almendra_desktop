@@ -1,0 +1,87 @@
+/* Cute Green Froggy Theme - AESTHETIC - Waybar Colors */
+
+@define-color bg_primary rgba(26, 58, 47, 0.45);
+@define-color bg_secondary rgba(45, 90, 71, 0.55);
+@define-color text_primary #e8f5e9;
+@define-color text_muted #1a3a2f;
+/* Darker text for light backgrounds */
+@define-color accent rgba(129, 199, 132, 0.65);
+/* Minty accent */
+@define-color urgent rgba(248, 180, 217, 0.65);
+
+/* Cute Green Palette Variety */
+@define-color mint_green rgba(165, 214, 167, 0.25);
+@define-color lime_green rgba(197, 225, 165, 0.25);
+@define-color seafoam_green rgba(128, 203, 196, 0.25);
+@define-color moss_green rgba(121, 134, 103, 0.25);
+@define-color soft_emerald rgba(77, 182, 172, 0.25);
+
+/* Special Colors */
+@define-color cute_pink rgba(244, 143, 177, 0.35);
+@define-color ws_bg rgba(165, 214, 167, 0.15);
+/* Lighter Mint workspace background */
+@define-color ws_bg_focused rgba(102, 187, 106, 0.55);
+/* Lighter and clearer focused green */
+
+/* Module background assignments */
+#clock {
+    background-color: #ffffff;
+    color: #1a3a2f;
+}
+
+#battery {
+    background-color: @lime_green;
+    color: #1a3a2f;
+}
+
+#backlight {
+    background-color: @mint_green;
+    color: #1a3a2f;
+}
+
+#pulseaudio {
+    background-color: @seafoam_green;
+    color: #1a3a2f;
+}
+
+#network {
+    background-color: @soft_emerald;
+    color: #1a3a2f;
+}
+
+#tray {
+    background-color: @lime_green;
+    color: #1a3a2f;
+}
+
+#custom-music {
+    background-color: @cute_pink;
+    color: #ffffff;
+    font-style: italic;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#workspaces button {
+    background-color: @ws_bg;
+    color: @text_muted;
+    border: 1px solid transparent;
+}
+
+#workspaces button.focused {
+    background-color: @ws_bg_focused;
+    color: #ffffff;
+    border: 1px solid @accent;
+    font-weight: bold;
+}
+
+/* Status overrides */
+#battery.warning {
+    background-color: #ffd54f;
+    color: #333;
+}
+
+#battery.critical {
+    background-color: #e57373;
+    color: white;
+}

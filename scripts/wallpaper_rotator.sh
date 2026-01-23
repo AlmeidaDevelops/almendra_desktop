@@ -1,22 +1,20 @@
 #!/bin/bash
+# Wallpaper rotator for Sway
+# Uses centralized ~/dotfiles/themes/ structure
 
-# Configuration
-CONFIG_FILE="$HOME/.config/sway/config"
-THEMES_DIR="$HOME/dotfiles/sway/.config/sway/themes"
+THEMES_DIR="$HOME/dotfiles/themes"
+CURRENT_LINK="$THEMES_DIR/current"
 
 change_wallpaper() {
-    # 1. Detect current theme
-    THEME=$(grep -oP "include themes/\K[^/]+" "$CONFIG_FILE" | head -n 1)
-
-    if [ -z "$THEME" ]; then
-        THEME="default"
-    fi
-
-    WALLPAPER_DIR="$THEMES_DIR/$THEME/wallpapers"
-    CACHE_FILE="$HOME/.cache/sway_wallpaper_$THEME"
+    # Get current theme wallpaper directory
+    WALLPAPER_DIR="$CURRENT_LINK/wallpapers"
+    
+    # Get theme name for cache file
+    THEME_NAME=$(basename "$(readlink -f "$CURRENT_LINK")")
+    CACHE_FILE="$HOME/.cache/sway_wallpaper_$THEME_NAME"
 
     if [ ! -d "$WALLPAPER_DIR" ]; then
-        notify-send "Wallpaper Picker" "Wallpaper directory not found for theme: $THEME"
+        notify-send "Wallpaper Picker" "Wallpaper directory not found"
         exit 1
     fi
 
@@ -35,27 +33,31 @@ change_wallpaper() {
         exit 0
     fi
 
-    # 2. Get the list of wallpapers (filenames only for wofi)
-    mapfile -t WALLPAPERS < <(find "$WALLPAPER_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) -exec basename {} \;)
+    # Get the list of wallpapers with image previews for wofi
+    WOFI_LIST=""
+    while IFS= read -r wallpaper; do
+        filename=$(basename "$wallpaper")
+        WOFI_LIST+="img:${wallpaper}:text:${filename}"$'\n'
+    done < <(find "$WALLPAPER_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \))
 
-    if [ ${#WALLPAPERS[@]} -eq 0 ]; then
-        notify-send "Wallpaper Picker" "No wallpapers found in $WALLPAPER_DIR"
+    if [ -z "$WOFI_LIST" ]; then
+        notify-send "Wallpaper Picker" "No wallpapers found"
         exit 1
     fi
 
-    # 3. Show wofi menu
-    SELECTED=$(printf "%s\n" "${WALLPAPERS[@]}" | wofi --dmenu --prompt "Select Wallpaper:")
+    # Show wofi menu with image previews
+    SELECTED=$(echo -e "$WOFI_LIST" | wofi --dmenu --prompt "Wallpaper:" --allow-images --cache-file=/dev/null -W 400 -I 48)
 
     if [ -n "$SELECTED" ]; then
-        # 4. Set the wallpaper
-        FULL_PATH="$WALLPAPER_DIR/$SELECTED"
+        # Extract the full path from wofi output
+        FULL_PATH=$(echo "$SELECTED" | sed 's/^img:\(.*\):text:.*$/\1/')
+        
         swaymsg "output * bg \"$FULL_PATH\" fill"
         
-        # Store state for this specific theme
+        # Store state
         mkdir -p "$(dirname "$CACHE_FILE")"
         echo "$FULL_PATH" > "$CACHE_FILE"
     fi
 }
 
-# Always run exactly once per invocation
 change_wallpaper "$1"

@@ -1,0 +1,47 @@
+/* Default Theme - Waybar Colors */
+/* Monochromatic Light */
+
+@define-color bg_primary rgba(245, 245, 245, 0.95);
+@define-color bg_secondary rgba(224, 224, 224, 0.9);
+@define-color text_primary #212121;
+@define-color text_muted #757575;
+@define-color accent #424242;
+@define-color urgent #ff5252;
+
+/* Module colors */
+#clock,
+#battery,
+#backlight,
+#network,
+#mpris,
+#pulseaudio,
+#tray {
+    background-color: @bg_primary;
+    color: @text_primary;
+}
+
+#workspaces button {
+    background-color: @bg_primary;
+    color: @text_muted;
+}
+
+#workspaces button.focused {
+    background-color: @accent;
+    color: @bg_primary;
+}
+
+#mpris {
+    background-color: @bg_secondary;
+}
+
+#mpris.paused {
+    color: @text_muted;
+}
+
+#battery.warning {
+    color: #ff9800;
+}
+
+#battery.critical {
+    color: @urgent;
+}

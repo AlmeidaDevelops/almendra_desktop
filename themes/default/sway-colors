@@ -1,0 +1,19 @@
+# Default Theme - Sway Colors
+# Monochromatic Light Theme
+
+set $bg_primary   #f5f5f5
+set $bg_secondary #e0e0e0
+set $text_primary #212121
+set $text_muted   #757575
+set $accent       #424242
+set $urgent       #ff5252
+
+# Client colors
+client.focused          $accent     $bg_primary $text_primary $accent     $accent
+client.focused_inactive $bg_secondary $bg_primary $text_muted   $bg_secondary $bg_secondary
+client.unfocused        $bg_secondary $bg_primary $text_muted   $bg_secondary $bg_secondary
+client.urgent           $urgent     $urgent     $bg_primary   $urgent     $urgent
+client.placeholder      $accent     $accent     $bg_primary   $accent     $accent
+
+# Fallback background
+output * bg #f5f5f5 solid_color

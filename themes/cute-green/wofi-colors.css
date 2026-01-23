@@ -1,0 +1,30 @@
+/* Cute Green Froggy Theme - AESTHETIC - Wofi Colors */
+
+@define-color bg_primary rgba(232, 245, 233, 0.75);
+@define-color bg_secondary rgba(200, 230, 201, 0.75);
+@define-color text_primary #1a3a2f;
+@define-color text_muted #2d5a47;
+@define-color accent #81c784;
+
+/* Applied colors */
+#outer-box {
+    background-color: @bg_primary;
+}
+
+#input {
+    background-color: @bg_secondary;
+    color: @text_primary;
+    border: 1px solid @accent;
+}
+
+#entry:selected {
+    background-color: @accent;
+}
+
+#text:selected {
+    color: #ffffff;
+}
+
+#text {
+    color: @text_primary;
+}

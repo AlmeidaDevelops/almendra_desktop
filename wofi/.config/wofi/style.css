@@ -1,36 +1,31 @@
-/* Clean and Rounded Wofi Theme */
+/* Wofi Styles */
+/* Common layout + colors from current theme */
 
 * {
-    font-family: Roboto, Helvetica, Arial, sans-serif, "Font Awesome 6 Free";
-    font-size: 13px;
+    font-family: "Noto Sans Mono", "DejaVu Sans Mono", monospace, "Font Awesome 6 Free";
+    font-size: 14px;
 }
 
 window {
-    margin: 5px;
+    margin: 0px;
     border: none;
-    background-color: #f5f5f5;
-    border-radius: 12px;
+    background-color: transparent;
 }
 
 #outer-box {
-    margin: 5px;
-    border: none;
-    background-color: transparent;
+    margin: 10px;
+    border-radius: 8px;
 }
 
 #input {
     margin: 10px;
-    border: none;
-    background-color: #e0e0e0;
-    color: #212121;
-    border-radius: 12px;
-    padding: 6px 10px;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 #inner-box {
-    margin: 5px;
+    margin: 10px;
     border: none;
-    background-color: transparent;
 }
 
 #scroll {
@@ -42,15 +37,9 @@ window {
 }
 
 #entry {
-    padding: 6px;
-    border-radius: 12px;
+    padding: 10px;
+    border-radius: 8px;
 }
 
-
-#entry:selected {
-    background-color: #424242;
-}
-
-#text:selected {
-    color: #f5f5f5;
-}
+/* Import colors - using absolute path */
+@import "/home/alm/dotfiles/themes/current/wofi-colors.css";

@@ -1,2 +1,40 @@
-@import "common.css";
-@import "themes/default/colors.css";
+/* Waybar Styles */
+/* Common layout + colors from current theme */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Noto Sans Mono", "DejaVu Sans Mono", monospace, "Font Awesome 6 Free";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+    min-height: 28px;
+    margin: 5px 12px 0 12px;
+}
+
+#clock,
+#battery,
+#backlight,
+#network,
+#mpris,
+#custom-music,
+#pulseaudio,
+#tray {
+    border-radius: 8px;
+    margin: 2px 4px;
+    padding: 0px 12px;
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    margin: 2px 2px;
+    border-radius: 8px;
+}
+
+/* Import colors - using absolute path */
+@import "/home/alm/dotfiles/themes/current/waybar-colors.css";

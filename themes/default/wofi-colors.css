@@ -1,0 +1,26 @@
+/* Default Theme - Wofi Colors */
+/* Monochromatic Light */
+
+@define-color bg_primary #f5f5f5;
+@define-color bg_secondary #e0e0e0;
+@define-color text_primary #212121;
+@define-color text_muted #757575;
+@define-color accent #424242;
+
+/* Applied colors */
+#outer-box {
+    background-color: @bg_primary;
+}
+
+#input {
+    background-color: @bg_secondary;
+    color: @text_primary;
+}
+
+#entry:selected {
+    background-color: @accent;
+}
+
+#text:selected {
+    color: @bg_primary;
+}

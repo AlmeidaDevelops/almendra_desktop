@@ -1,0 +1,120 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "sway/workspaces",
+        "mpris"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "backlight",
+        "pulseaudio",
+        "network",
+        "battery",
+        "tray"
+    ],
+    "sway/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "🐸",
+            "2": "🌿",
+            "3": "🪷",
+            "4": "🌸",
+            "5": "🍃",
+            "6": "🪻",
+            "7": "🌺",
+            "8": "🦋",
+            "9": "🌼",
+            "10": "🐢"
+        }
+    },
+    "sway/window": {
+        "max-length": 50
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y/%m/%d %H:%M:%S}",
+        "interval": 1,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#e8f5e9'><b>{}</b></span>",
+                "days": "<span><b>{}</b></span>",
+                "weekdays": "<span color='#a5d6a7'><b>{}</b></span>",
+                "today": "<span color='#f8b4d9'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{status_icon} {title} - {artist}",
+        "player-icons": {
+            "default": "",
+            "spotify": "",
+            "firefox": "",
+            "chromium": "",
+            "youtube-music": ""
+        },
+        "status-icons": {
+            "paused": ""
+        },
+        "on-click": "/home/alm/dotfiles/scripts/media_control.sh play-pause",
+        "on-scroll-up": "/home/alm/dotfiles/scripts/media_control.sh next",
+        "on-scroll-down": "/home/alm/dotfiles/scripts/media_control.sh previous"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            ""
+        ]
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "on-click": "alacritty -e nmtui"
+    }
+}

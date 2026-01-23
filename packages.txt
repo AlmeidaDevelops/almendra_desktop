@@ -22,3 +22,4 @@ grim
 slurp
 wl-clipboard
 pavucontrol
+policykit-1-gnome

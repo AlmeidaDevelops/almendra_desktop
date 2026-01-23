@@ -7,9 +7,10 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 
 ### Output
 exec_always ~/dotfiles/scripts/wallpaper_rotator.sh --init
+output eDP-1 enable
 
 ### Include fragments
-include themes/default/colors
+include ~/dotfiles/themes/current/sway-colors
 include config.d/*
 
 ### Input configuration
@@ -26,9 +27,7 @@ input type:pointer {
     natural_scroll enabled
 }
 
-# Bar
-bar {
-    swaybar_command waybar
-}
+# Bar (Waybar)
+exec_always pkill waybar; waybar &
 
 include /etc/sway/config.d/*
