@@ -1,0 +1,30 @@
+/* Cute Trans Theme - Pink, Blue, Purple & Yellow - Wofi Colors */
+
+@define-color bg_primary rgba(252, 228, 236, 0.85);
+@define-color bg_secondary rgba(225, 245, 254, 0.85);
+@define-color text_primary #4a4a4a;
+@define-color text_muted #666666;
+@define-color accent #f8b4d9;
+
+/* Applied colors */
+#outer-box {
+    background-color: @bg_primary;
+}
+
+#input {
+    background-color: @bg_secondary;
+    color: @text_primary;
+    border: 2px solid @accent;
+}
+
+#entry:selected {
+    background-color: @accent;
+}
+
+#text:selected {
+    color: #ffffff;
+}
+
+#text {
+    color: @text_primary;
+}

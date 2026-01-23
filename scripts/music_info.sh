@@ -6,7 +6,8 @@ ICON_PLAY=$'\uf144'  # fa-circle-play (Solid)
 ICON_PAUSE=$'\uf28b' # fa-circle-pause (Solid)
 
 # Loop to handle events
-playerctl metadata --format '{{status}}::{{artist}}::{{title}}' --follow | while IFS='::' read -r status artist title; do
+# Using tab as delimiter to avoid issues with :: appearing in metadata
+playerctl metadata --format $'{{status}}\t{{artist}}\t{{title}}' --follow | while IFS=$'\t' read -r status artist title; do
     # Fallback
     if [ -z "$status" ]; then
         status=$(playerctl status 2>/dev/null)

@@ -1,0 +1,81 @@
+/* Cute Trans Theme - Pink, Blue, Purple & Yellow - Waybar Colors */
+
+@define-color bg_primary rgba(252, 228, 236, 0.45);
+@define-color bg_secondary rgba(225, 245, 254, 0.55);
+@define-color text_primary #4a4a4a;
+@define-color text_muted #666666;
+@define-color accent rgba(248, 180, 217, 0.65);
+@define-color urgent rgba(255, 235, 59, 0.65);
+
+/* Cute Trans Palette - Pastel Colors */
+@define-color cute_pink rgba(248, 180, 217, 0.85);
+@define-color cute_blue rgba(137, 207, 240, 0.85);
+@define-color cute_purple rgba(201, 160, 220, 0.85);
+@define-color cute_yellow rgba(255, 235, 153, 0.85);
+
+/* Workspace Colors - Blue inactive, Pink active */
+@define-color ws_bg rgba(137, 207, 240, 0.35);
+@define-color ws_bg_focused rgba(248, 180, 217, 0.85);
+
+/* Module background assignments */
+#clock {
+    background-color: @cute_pink;
+    color: #4a4a4a;
+}
+
+#battery {
+    background-color: @cute_yellow;
+    color: #4a4a4a;
+}
+
+#backlight {
+    background-color: @cute_purple;
+    color: #4a4a4a;
+}
+
+#pulseaudio {
+    background-color: @cute_blue;
+    color: #4a4a4a;
+}
+
+#network {
+    background-color: @cute_pink;
+    color: #4a4a4a;
+}
+
+#tray {
+    background-color: @cute_blue;
+    color: #4a4a4a;
+}
+
+#custom-music {
+    background-color: @cute_purple;
+    color: #ffffff;
+    font-style: italic;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#workspaces button {
+    background-color: @ws_bg;
+    color: @text_primary;
+    border: 1px solid transparent;
+}
+
+#workspaces button.focused {
+    background-color: @ws_bg_focused;
+    color: #4a4a4a;
+    border: 1px solid @accent;
+    font-weight: bold;
+}
+
+/* Status overrides */
+#battery.warning {
+    background-color: #ffd54f;
+    color: #333;
+}
+
+#battery.critical {
+    background-color: #e57373;
+    color: white;
+}
