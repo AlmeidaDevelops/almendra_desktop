@@ -5,7 +5,7 @@ set $menu wofi --show drun
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-### Output
+output * bg "#000000" solid_color
 exec_always ~/dotfiles/scripts/wallpaper_rotator.sh --init
 output eDP-1 enable
 
@@ -27,7 +27,7 @@ input type:pointer {
     natural_scroll enabled
 }
 
-# Bar (Waybar)
-exec_always pkill waybar; waybar &
+# Bar (Waybar) - delay to ensure Wayland socket is ready
+exec_always bash -c "sleep 1 && pkill waybar; waybar &"
 
 include /etc/sway/config.d/*

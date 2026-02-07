@@ -25,27 +25,27 @@
 
 #battery {
     background-color: @cute_yellow;
-    color: #4a4a4a;
+    color: #ffffff;
 }
 
 #backlight {
     background-color: @cute_purple;
-    color: #4a4a4a;
+    color: #ffffff;
 }
 
 #pulseaudio {
     background-color: @cute_blue;
-    color: #4a4a4a;
+    color: #ffffff;
 }
 
 #network {
     background-color: @cute_pink;
-    color: #4a4a4a;
+    color: #ffffff;
 }
 
 #tray {
     background-color: @cute_blue;
-    color: #4a4a4a;
+    color: #ffffff;
 }
 
 #custom-music {
